@@ -7,8 +7,8 @@ import sys
 import datetime
 import logging
 
-logging.basicConfig(filename='/var/log/NOTEBot/NOTEBot.log', level=logging.INFO)
-logging.info(str(datetime.datetime.today()) + ' : NOTEBot START')
+logging.basicConfig(filename='/var/log/NoteBot/NoteBot.log', level=logging.INFO)
+logging.info(str(datetime.datetime.today()) + ' : NoteBot START')
 
 try:
     with open('credentials.json') as creds:
@@ -71,4 +71,4 @@ for cred in credentials:
     except:
         logging.error(str(datetime.datetime.today()) + ' : !! ERROR for ' + str(cred) + ' !!')
 
-logging.info(str(datetime.datetime.today()) + ' : NOTEBot END')
+logging.info(str(datetime.datetime.today()) + ' : NoteBot END')

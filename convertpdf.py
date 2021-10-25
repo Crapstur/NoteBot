@@ -19,9 +19,10 @@ def ft_crop(image_path, left, top, width, height):
 
     area.save(image_path, "PNG")
 
+logging.basicConfig(filename='/var/log/NoteBot/convertpdf.log', level=logging.INFO)
+logging.warning(str(datetime.datetime.today()) + ' : convertpdf START')
+
 try:
-    logging.basicConfig(filename='/var/log/NOTEBot/convertpdf.log', level=logging.INFO)
-    logging.warning(str(datetime.datetime.today()) + ' : convertpdf START')
 
     notes_file = "./notes/"
     tmp_file = "./tmp/"
@@ -61,6 +62,6 @@ try:
                     ft_crop(image_path, 0, 0, 1654, 2250)
             logging.info(str(datetime.datetime.today()) + ' : Bullettin : [\"' + bulletin + '\"] de [\"' + eleve + '\"] convertit')
 except:
-    pass
+    logging.error(str(datetime.datetime.today()) + ' : !! ERROR !!')
 
 logging.warning(str(datetime.datetime.today()) + ' : convertpdf STOP')
