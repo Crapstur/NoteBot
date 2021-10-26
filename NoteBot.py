@@ -10,6 +10,8 @@ import logging
 logging.basicConfig(filename='/var/log/NoteBot/NoteBot.log', level=logging.INFO)
 logging.info(str(datetime.datetime.today()) + ' : NoteBot START')
 
+os.chdir('/home/userbot/NoteBot/')
+
 try:
     with open('credentials.json') as creds:
         credentials = json.load(creds)

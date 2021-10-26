@@ -22,6 +22,8 @@ def ft_crop(image_path, left, top, width, height):
 logging.basicConfig(filename='/var/log/NoteBot/convertpdf.log', level=logging.INFO)
 logging.warning(str(datetime.datetime.today()) + ' : convertpdf START')
 
+os.chdir('/home/userbot/NoteBot/')
+
 try:
 
     notes_file = "./notes/"
