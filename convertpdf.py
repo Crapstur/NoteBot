@@ -56,8 +56,8 @@ try:
 
             images = convert_from_path(bulletin_notes_file)
             for i in range(len(images)):
-                image_path = bulletin_tmp_file + '/page'+ str(i+1) +'.jpg'
-                images[i].save(image_path, 'JPEG')
+                image_path = bulletin_tmp_file + '/page'+ str(i+1) +'.png'
+                images[i].save(image_path, 'PNG')
                 if i == 0:
                     ft_crop(image_path, 0, 450, 1654, 1750)
                 else:
