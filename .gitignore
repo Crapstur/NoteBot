@@ -131,3 +131,5 @@ dmypy.json
 credentials.json
 tmp/*
 notes/*
+*.back*
+reset.sh

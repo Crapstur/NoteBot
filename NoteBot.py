@@ -8,7 +8,7 @@ import datetime
 import logging
 
 logging.basicConfig(filename='/var/log/NoteBot/NoteBot.log', level=logging.INFO)
-logging.info(str(datetime.datetime.today()) + ' : NoteBot START')
+logging.warning(str(datetime.datetime.today()) + ' : NoteBot START')
 
 os.chdir('/home/userbot/NoteBot/')
 
