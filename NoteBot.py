@@ -73,4 +73,4 @@ for cred in credentials:
     except:
         logging.error(str(datetime.datetime.today()) + ' : !! ERROR for ' + str(cred) + ' !!')
 
-logging.info(str(datetime.datetime.today()) + ' : NoteBot END')
+logging.warning(str(datetime.datetime.today()) + ' : NoteBot END')
