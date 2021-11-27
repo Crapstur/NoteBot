@@ -4,6 +4,7 @@ from selenium import webdriver
 import json
 import os
 import sys
+import time
 import datetime
 import logging
 
@@ -68,7 +69,25 @@ for cred in credentials:
 
         tele=driver.find_element_by_xpath('//*[@id="content"]/form/input')
         tele.click()
+        download = True
+        crdownload = False
+        while download == True:
+            crdownload = False
+            
+            files = os.listdir(path)
+            for file in files:
+                if file.endswith(".crdownload"):
+                    crdownload = True
+                    
+                    time.sleep(1)
+                    
+                if crdownload == False:
+                    download = False
+                file = file
+            time.sleep(1)
+            
         logging.info(str(datetime.datetime.today()) + ' : PDF download for ' + str(cred))
+        
         driver.close()
     except:
         logging.error(str(datetime.datetime.today()) + ' : !! ERROR for ' + str(cred) + ' !!')
