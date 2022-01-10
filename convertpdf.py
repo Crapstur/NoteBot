@@ -63,6 +63,7 @@ try:
                 else:
                     ft_crop(image_path, 0, 0, 1654, 2250)
             logging.info(str(datetime.datetime.today()) + ' : Bullettin : [\"' + bulletin + '\"] de [\"' + eleve + '\"] convertit')
+    logging.info(str(datetime.datetime.today()) + ' : Finished without error')
 except:
     logging.error(str(datetime.datetime.today()) + ' : !! ERROR !!')
 

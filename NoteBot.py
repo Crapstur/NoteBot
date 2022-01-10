@@ -89,6 +89,7 @@ for cred in credentials:
         logging.info(str(datetime.datetime.today()) + ' : PDF download for ' + str(cred))
         
         driver.close()
+        logging.info(str(datetime.datetime.today()) + ' : Finished without error')
     except:
         logging.error(str(datetime.datetime.today()) + ' : !! ERROR for ' + str(cred) + ' !!')
 
